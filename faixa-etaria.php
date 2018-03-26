@@ -12,6 +12,14 @@
 			<input onclick="location.href='index.php'" type="button"  value="Pagina Inicial">
 			
 		</form>
+		<?php 
+			include('funcoes.php');
+			if (!empty($_POST['submit'])) {				
+				$resultado = faixa_etaria($_POST['qtp']);
+				print ('Resultado: '.$resultado);
+				var_dump($resultado);
+			}
+		 ?>
 	</div>
 </body>
 </html>
